@@ -1,7 +1,7 @@
 import "@styles/globals.css";
 // components
 import { Nav } from "@components/Nav";
-import { Provider as SessionProvider } from "@components/Provider";
+import { Provider } from "@components/Provider";
 
 export const metadata = {
   title: "Next App",
@@ -12,7 +12,7 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <SessionProvider>
+        <Provider>
           <div className="main">
             <div className="gradient" />
           </div>
@@ -20,7 +20,7 @@ const RootLayout = ({ children }) => {
             <Nav />
             {children}
           </main>
-        </SessionProvider>
+        </Provider>
       </body>
     </html>
   );
